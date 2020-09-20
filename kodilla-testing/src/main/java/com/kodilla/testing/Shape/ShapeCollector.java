@@ -20,7 +20,13 @@ public class ShapeCollector {
     }
 
     public Shape getFigure(int n){
-        return shapesList.get(n);
+
+        if (n > shapesList.size()){
+            return null;
+        } else if (n < 0){
+            return null;
+        } else {
+            return shapesList.get(n);}
     }
 
     public ArrayList<Shape> showFigures(){
