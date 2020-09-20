@@ -4,5 +4,7 @@ import java.util.Map;
 
 public interface Temperatures {
 
-    Map<String, Double> getTemperarures();
+    Map<String, Double> getTemperatures();
+
+
 }

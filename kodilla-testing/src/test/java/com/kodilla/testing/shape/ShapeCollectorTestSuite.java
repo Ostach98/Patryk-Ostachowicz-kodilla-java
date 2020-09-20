@@ -82,7 +82,7 @@ public class ShapeCollectorTestSuite {
 
         collector.addFigure(circle);
         //Then
-        Assert.assertEquals(circle, collector.getFigure(-2));
+        Assert.assertNull("wartość poza zakresem", collector.getFigure(-2));
 
     }
 
@@ -95,7 +95,7 @@ public class ShapeCollectorTestSuite {
 
         collector.addFigure(circle);
         //Then
-        Assert.assertEquals(circle, collector.getFigure(11));
+        Assert.assertNull("wartość poza zakresem", collector.getFigure(11));
 
     }
 }
