@@ -36,12 +36,14 @@ public class ShapeCollectorTestSuite {
         //Given
         ShapeCollector collector = new ShapeCollector();
         Circle circle = new Circle(10);
+        Triangle triangle = new Triangle(7, 2);
         Square square = new Square(6);
         //When
         collector.addFigure(circle);
+        collector.addFigure(triangle);
         collector.addFigure(square);
         //Then
-        Assert.assertEquals(2, collector.collectedShapesQuantity());
+        Assert.assertEquals(3, collector.collectedShapesQuantity());
     }
 
     @Test
@@ -64,23 +66,36 @@ public class ShapeCollectorTestSuite {
         ShapeCollector collector = new ShapeCollector();
         //When
         Circle circle = new Circle(10);
+
         collector.addFigure(circle);
         //Then
         Assert.assertEquals(circle, collector.getFigure(0));
 
     }
+
     @Test
-    public void showFiguresTest(){
-        //given
+    public void getFigureTest1() {
+        //Given
         ShapeCollector collector = new ShapeCollector();
-        Circle circle = new Circle(10);
-        Triangle triangle = new Triangle(7, 2);
-        Square square = new Square(6);
         //When
+        Circle circle = new Circle(10);
+
         collector.addFigure(circle);
-        collector.addFigure(triangle);
-        collector.addFigure(square);
-        //when
-        collector.showFigures();
+        //Then
+        Assert.assertEquals(circle, collector.getFigure(-2));
+
+    }
+
+    @Test
+    public void getFigureTest2() {
+        //Given
+        ShapeCollector collector = new ShapeCollector();
+        //When
+        Circle circle = new Circle(10);
+
+        collector.addFigure(circle);
+        //Then
+        Assert.assertEquals(circle, collector.getFigure(11));
+
     }
 }
