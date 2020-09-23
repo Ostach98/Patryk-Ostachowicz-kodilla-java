@@ -36,7 +36,7 @@ public class WeatherForecast {
         if (temperaturesList.size() % 2 == 1) {
             median = temperaturesList.get(med);
         } else {
-            median = (temperaturesList.get(med) + temperaturesList.get(med)) / 2;
+            median = (temperaturesList.get(med  - 1) + temperaturesList.get(med)) / 2;
         }
         return median ;
     }
