@@ -71,7 +71,7 @@ public class WeatherForecastTestSuite {
         double averageTemp = weatherForecast.calculateAverage();
 
         //Then
-        Assertions.assertEquals(25.56, averageTemp);
+        Assertions.assertEquals(25.56, averageTemp, 0.1);
     }
     @Test
     void testCalculateAverageWithMock1() {
@@ -87,7 +87,7 @@ public class WeatherForecastTestSuite {
         double averageTemp = weatherForecast.calculateAverage();
 
         //Then
-        Assertions.assertEquals(25.85, averageTemp);
+        Assertions.assertEquals(25.85, averageTemp, 0.1);
     }
 
     @Test
@@ -104,7 +104,7 @@ public class WeatherForecastTestSuite {
         double averageTemp = weatherForecast.calculateAverage();
 
         //Then
-        Assertions.assertEquals(25.599999999999998, averageTemp);
+        Assertions.assertEquals(25.599999999999998, averageTemp, 0.1);
     }
     @Test
     void testCalculateAverageWithMock3() {
@@ -120,7 +120,7 @@ public class WeatherForecastTestSuite {
         double averageTemp = weatherForecast.calculateAverage();
 
         //Then
-        Assertions.assertEquals(25.700000000000003, averageTemp);
+        Assertions.assertEquals(25.700000000000003, averageTemp, 0.1);
     }
 
     @Test
@@ -139,7 +139,7 @@ public class WeatherForecastTestSuite {
         double medianTemp = weatherForecast.calculateMedian();
 
         //Then
-        Assertions.assertEquals(25.5, medianTemp);
+        Assertions.assertEquals(25.5, medianTemp, 0.1);
     }
     @Test
     void testCalculateMedianWithMock1() {
@@ -154,7 +154,7 @@ public class WeatherForecastTestSuite {
         double medianTemp = weatherForecast.calculateMedian();
 
         //Then
-        Assertions.assertEquals(25.65, medianTemp);
+        Assertions.assertEquals(25.65, medianTemp, 0.1);
     }
     @Test
     void testCalculateMedianWithMock2() {
@@ -170,7 +170,7 @@ public class WeatherForecastTestSuite {
         double medianTemp = weatherForecast.calculateMedian();
 
         //Then
-        Assertions.assertEquals(25.5, medianTemp);
+        Assertions.assertEquals(25.5, medianTemp, 0.1);
     }
     @Test
     void testCalculateMedianWithMock3() {
@@ -187,6 +187,6 @@ public class WeatherForecastTestSuite {
         double medianTemp = weatherForecast.calculateMedian();
 
         //Then
-        Assertions.assertEquals(25.8, medianTemp);
+        Assertions.assertEquals(25.8, medianTemp, 0.1);
     }
 }
