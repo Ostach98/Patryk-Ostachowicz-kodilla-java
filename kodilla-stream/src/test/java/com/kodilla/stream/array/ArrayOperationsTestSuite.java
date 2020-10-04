@@ -12,7 +12,14 @@ public class ArrayOperationsTestSuite {
         //when
         double result = ArrayOperations.getAverage(numbers);
         //then
-        assertEquals(3.5, result);
+        assertEquals(3.5, result, 0.01);
 
+    }
+
+    @Test
+    void testGetAverageEmpty(){
+        int [] numbers = {0};
+        double result = ArrayOperations.getAverage(numbers);
+        assertEquals(0, result);
     }
 }
