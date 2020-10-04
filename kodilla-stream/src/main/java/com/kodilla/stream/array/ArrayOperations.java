@@ -9,7 +9,7 @@ public class ArrayOperations {
                 .forEach(System.out::println);
         return IntStream.range(0, numbers.length)
                 .map(i -> numbers[i])
-                .average().getAsDouble();
+                .average().orElse(0);
 
     }
 }

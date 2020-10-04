@@ -1,7 +1,9 @@
 package com.kodilla.stream.array;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ArrayOperationsTestSuite {
 
@@ -18,7 +20,7 @@ public class ArrayOperationsTestSuite {
 
     @Test
     void testGetAverageEmpty(){
-        int [] numbers = {0};
+        int [] numbers = {};
         double result = ArrayOperations.getAverage(numbers);
         assertEquals(0, result);
     }
